@@ -1,14 +1,21 @@
 import os
+import yaml
+import argparse
 
 from boards.image_utils import get_image_names
 from boards.file_utils import create_html_file, create_css_file, create_js_file, create_index_file, create_master_index_file
 from boards.dir_utils import getDirList
 
-import yaml
+
 
 def load_config(yml_path="config.yml"):
     with open(yml_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
+    
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--csvs', nargs='+', help='List of CSV files to use')
+args = parser.parse_args()
 
 config = load_config()
 masterDir = config["masterDir"]
@@ -16,27 +23,16 @@ masterDir = config["masterDir"]
 
 # choice = input("which csvs to choose?\n1. misc\n2. SSD files\n3. pinterest\n4. All\n")
 # add more options to include more combinations of csv files. 
-choice = 4 # for test puposes
+# choice = 4 # for test puposes
 
-try:
-    choice = int(choice)
-except ValueError:
-    print("Invalid input. Enter a number from 1 to 4.")
+# Determine CSV list
+csvList = args.csvs if args.csvs else config.get("csvList", [])
+
+if not csvList:
+    print("No CSV files provided. Set them in config.yml or pass using --csvs.")
     exit(1)
 
-csvList = []
-
-match choice:
-    case 1:
-        csvList = ["fileLists/misc.csv"]
-    case 2:
-        csvList = ["fileLists/onSsd.csv"]
-    case 3:
-        csvList = ["fileLists/pinterest.csv"]
-    case 4:
-        csvList = ["fileLists/misc.csv", "fileLists/onSsd.csv", "fileLists/pinterest.csv"]
-        
-
+# Build directory list from CSVs
 directories = getDirList(csvList, masterDir)
 
 for directory_info in directories:

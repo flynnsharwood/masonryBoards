@@ -5,6 +5,10 @@ input your masterDir in the config.yml, the dir in which you want to store the c
 Then create a csv file in the fileLists Folder.
 Fill the first column with the absolute path of the directory with the images, and fill the second one with the name you want to give the directory in the created folders. 
 
+You can change the csv filenames as you wish, add more or remove existing.
+
+use --csvs flag to provide a list of csv files. If this isn't used, it will fallback to the directories mentioned in the config.yml.
+
 That should be it. 
 
 

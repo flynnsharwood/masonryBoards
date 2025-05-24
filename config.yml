@@ -1,1 +1,5 @@
 masterDir: "C:/Users/ggggg/Desktop/boards"
+csvList:
+  - fileLists/misc.csv
+  - fileLists/onSsd.csv
+  - fileLists/pinterest.csv
