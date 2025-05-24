@@ -36,3 +36,4 @@ That should be it.
 - [ ] Randomise button. Randomisation should be temporary, only till the tab is open. 
 - [ ] sort by option
 - [ ] add an option to copy a list of images to clipboard
+- [ ] example site
