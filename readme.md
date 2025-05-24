@@ -1,5 +1,15 @@
 # masonryBoard
 
+## what this does
+
+it takes directories filled with pics and sub directories filled with pics, and converts it into html files linking to those images. 
+The images are arranged in a masonry format (looks like pinterest).
+Click on the image to copy the image path.
+You can change the number of columns shown.
+
+
+## how to 
+
 input your masterDir in the config.yml, the dir in which you want to store the created html files. 
 
 Then create a csv file in the fileLists Folder.
