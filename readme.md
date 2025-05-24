@@ -19,7 +19,6 @@ That should be it.
 - [x] Clean the code, organise it and put it on github
 - [x] Fix nested folders not being links issue.
 - [x] Get the list of target and destination folders from a csv file or a txt file.
-- [ ] Each function gets its own file
 - [ ] hide image option
 - [ ] Long press to open image in new tab
 - [ ] start image option
