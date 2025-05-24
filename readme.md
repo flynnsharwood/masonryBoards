@@ -12,9 +12,9 @@ That should be it.
 
 - [ ] make it so that it can push to a github pages site.
 - [ ] Make the bash file better, make the bash file do the above task.
-- [ ] Clean the code, organise it and put it on github
-- [ ] Fix nested folders not being links issue.
-- [ ] Get the list of target and destination folders from a csv file or a txt file.
+- [x] Clean the code, organise it and put it on github
+- [x] Fix nested folders not being links issue.
+- [x] Get the list of target and destination folders from a csv file or a txt file.
 - [ ] Each function gets its own file
 - [ ] hide image option
 - [ ] Long press to open image in new tab
