@@ -1,3 +1,6 @@
+> [!NOTE] this version is less updated
+> This is the repo that will keep getting constant changes. https://github.com/coerciasink/boards
+
 # masonryBoard
 
 ## what this does
